@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photography - My hobby 📸</title>
+    <style>
+      body {
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+        color: #333;
+        text-align: center;
+        padding: 20px;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      body.dark-theme {
+        background-color: #333;
+        color: #f0f0f0;
+      }
+
+      h1 {
+        color: #4CAF50;
+        font-size: 36px;
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      h2 {
+        color: #555;
+        font-size: 28px;
+        animation: slideIn 1s ease-out;
+      }
+
+      body.dark-theme h1,
+      body.dark-theme h2 {
+        color: #4CAF50;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 20px auto;
+        transform: rotate(0deg);
+        transition: transform 0.5s;
+      }
+
+      p:hover {
+        transform: rotate(3deg);
+      }
+
+      .image-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+        justify-items: center;
+      }
+
+      .image-grid img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .image-grid img:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      button:hover {
+        background-color: #45a049;
+        transform: scale(1.05);
+      }
+
+      body.dark-theme button {
+        background-color: #555;
+        color: #f0f0f0;
+      }
+
+      footer {
+        margin-top: 40px;
+        font-size: 14px;
+      }
+
+      footer a {
+        color: #4CAF50;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateY(-20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button id="theme-toggle">Toggle Dark/Light Theme</button>
+    <h1>Photography</h1>
+    <h2>My favorite hobby</h2>
+    <div class="image-grid">
+      <a href="https://en.wikipedia.org/wiki/Photography" target="_blank">
+        <img
+          src="https://images.unsplash.com/photo-1506765515384-028b60a970df"
+          alt="Camera"
+        />
+      </a>
+      <img
+        src="https://images.unsplash.com/photo-1519681393784-d120267933ba"
+        alt="Landscape photography"
+      />
+      <img
+        src="https://th.bing.com/th/id/OIP.A7v1Wj4F0AfOso0Nhk45xwHaE8?rs=1&pid=ImgDetMain"
+        alt="City photography"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1547721064-da6cfb341d50"
+        alt="Nature photography"
+      />
+      <img
+        src="https://images.unsplash.com/photo-1499084732479-de2c02d45fc4"
+        alt="Portrait photography"
+      />
+    </div>
+    <p>
+      Photography is the art, application, and practice of creating durable
+      images by recording light, either electronically by means of an image
+      sensor, or chemically by means of a light-sensitive material such as
+      photographic film.
+    </p>
+
+    <button id="learn-photography">Learn Photography</button>
+    <footer>
+      Coded by Ndalo
+    </footer>
+
+    <script>
+      const toggleButton = document.getElementById('theme-toggle');
+      toggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+      });
+
+      const learnButton = document.getElementById('learn-photography');
+      learnButton.addEventListener('click', () => {
+        window.location.href = 'https://www.bing.com/search?q=different+types+of+photography&FORM=QSRE4'; 
+      });
+    </script>
+  </body>
+</html>
